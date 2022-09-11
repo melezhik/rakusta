@@ -15,3 +15,10 @@ projects:
         docker: debian
         bootstrap: true
         no_sudo: true
+    after:
+    -
+      name: build
+      sparrowdo:
+        docker: archlinux
+        bootstrap: true
+        no_sudo: true
