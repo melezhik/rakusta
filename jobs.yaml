@@ -2,7 +2,8 @@ projects:
   rakusta:
     path: https://github.com/melezhik/rakusta.git
     #action: docker build stop
-    action: hello
+    #action: hello
+    action: build
     sparrowdo:
       docker: alpine
       bootstrap: true
