@@ -1,13 +1,14 @@
 projects:
   rakudo-build:
     path: https://github.com/melezhik/rakusta.git
-    action: docker build stop
+    #action: docker build stop
+    action: hello
     sparrowdo:
       docker: alpine
       bootstrap: true
       no_sudo: true
     after:
-    - 
+    -
       name: build
       sparrowdo:
         docker: debian
