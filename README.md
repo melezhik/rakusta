@@ -2,6 +2,14 @@
 
 Build rakudo on a variety of platforms
 
+# logo
+
+```
+Rakudo cooked right 
+
+
+```
+
 # Install
 
 ```bash
