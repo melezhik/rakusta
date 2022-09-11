@@ -1,5 +1,5 @@
 projects:
-  rakudo-build:
+  rakusta:
     path: https://github.com/melezhik/rakusta.git
     #action: docker build stop
     action: hello
