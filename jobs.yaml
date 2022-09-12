@@ -8,18 +8,21 @@ projects:
       -
         action: alpine-setup build
         queue-id: rakudo-build
+        title: alpine build
         sparrowdo:
           docker: alpine
           bootstrap: true
           no_sudo: true
       -
         queue-id: rakudo-build
+        title: debian build
         sparrowdo:
           docker: debian
           bootstrap: true
           no_sudo: true
       -
         queue-id: rakudo-build
+        title: archlinux build
         sparrowdo:
           docker: archlinux
           bootstrap: true
