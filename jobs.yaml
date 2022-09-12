@@ -4,21 +4,23 @@ projects:
     #action: docker build stop
     #action: hello
     action: build
-    sparrowdo:
-      docker: alpine
-      bootstrap: true
-      no_sudo: true
-    after:
-    -
-      name: build
-      sparrowdo:
-        docker: debian
-        bootstrap: true
-        no_sudo: true
-    after:
-    -
-      name: build
-      sparrowdo:
-        docker: archlinux
-        bootstrap: true
-        no_sudo: true
+    hosts:
+      -
+        action: alpine-setup build
+        queue-id: rakudo-build
+        sparrowdo:
+          docker: alpine
+          bootstrap: true
+          no_sudo: true
+      -
+        queue-id: rakudo-build
+        sparrowdo:
+          docker: debian
+          bootstrap: true
+          no_sudo: true
+      -
+        queue-id: rakudo-build
+        sparrowdo:
+          docker: archlinux
+          bootstrap: true
+          no_sudo: true
