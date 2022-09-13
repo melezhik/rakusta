@@ -4,16 +4,19 @@ projects:
     #action: docker build stop
     #action: hello
     action: build
+    title: linux builds
     hosts:
       -
-        action: alpine-setup build
+        host: https://sparrowhub.io:4000
         queue-id: rakudo-build
         title: alpine build
+        action: alpine-setup build
         sparrowdo:
           docker: alpine
           bootstrap: true
           no_sudo: true
       -
+        host: https://sparrowhub.io:4000
         queue-id: rakudo-build
         title: debian build
         sparrowdo:
@@ -21,6 +24,7 @@ projects:
           bootstrap: true
           no_sudo: true
       -
+        host: https://sparrowhub.io:4000
         queue-id: rakudo-build
         title: archlinux build
         sparrowdo:
