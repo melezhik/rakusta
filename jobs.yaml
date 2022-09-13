@@ -7,7 +7,7 @@ projects:
     title: linux builds
     hosts:
       -
-        host: https://sparrowhub.io:4000
+        url: https://sparrowhub.io:4000
         queue-id: rakudo-build
         title: alpine build
         action: alpine-setup build
@@ -16,7 +16,7 @@ projects:
           bootstrap: true
           no_sudo: true
       -
-        host: https://sparrowhub.io:4000
+        url: https://sparrowhub.io:4000
         queue-id: rakudo-build
         title: debian build
         sparrowdo:
@@ -24,7 +24,7 @@ projects:
           bootstrap: true
           no_sudo: true
       -
-        host: https://sparrowhub.io:4000
+        url: https://sparrowhub.io:4000
         queue-id: rakudo-build
         title: archlinux build
         sparrowdo:
