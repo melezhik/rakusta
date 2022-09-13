@@ -1,10 +1,6 @@
 projects:
-  rakusta:
+  run_docker:
     path: https://github.com/melezhik/rakusta.git
-    #action: docker build stop
-    #action: hello
-    action: build
-    title: linux builds
     hosts:
       -
         url: https://sparrowhub.io:4000
@@ -13,6 +9,30 @@ projects:
         action: run-docker
         vars:
           DOCKER: alpine
+      -
+        url: https://sparrowhub.io:4000
+        queue-id: rakudo-build
+        title: run-docker debian
+        action: run-docker
+        vars:
+          DOCKER: debian
+      -
+        url: https://sparrowhub.io:4000
+        queue-id: rakudo-build
+        title: run-docker archlinux
+        action: run-docker
+        vars:
+          DOCKER: archlinux
+  rakusta:
+    path: https://github.com/melezhik/rakusta.git
+    #action: docker build stop
+    #action: hello
+    action: build
+    title: linux builds
+    before:
+      -
+        name: run_docker
+    hosts:
       -
         url: https://sparrowhub.io:4000
         queue-id: rakudo-build
@@ -25,25 +45,11 @@ projects:
       -
         url: https://sparrowhub.io:4000
         queue-id: rakudo-build
-        title: run-docker debian
-        action: run-docker        
-        vars:
-          DOCKER: debian
-      -
-        url: https://sparrowhub.io:4000
-        queue-id: rakudo-build
         title: debian build
         sparrowdo:
           docker: debian
           bootstrap: true
           no_sudo: true
-      -
-        url: https://sparrowhub.io:4000
-        queue-id: rakudo-build
-        title: run-docker archlinux
-        action: run-docker        
-        vars:
-          DOCKER: archlinux
       -
         url: https://sparrowhub.io:4000
         queue-id: rakudo-build
