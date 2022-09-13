@@ -9,6 +9,13 @@ projects:
       -
         url: https://sparrowhub.io:4000
         queue-id: rakudo-build
+        title: run-docker alpine
+        action: run-docker
+        vars:
+          DOCKER: alpine
+      -
+        url: https://sparrowhub.io:4000
+        queue-id: rakudo-build
         title: alpine build
         action: alpine-setup build
         sparrowdo:
@@ -18,11 +25,25 @@ projects:
       -
         url: https://sparrowhub.io:4000
         queue-id: rakudo-build
+        title: run-docker debian
+        action: run-docker        
+        vars:
+          DOCKER: debian
+      -
+        url: https://sparrowhub.io:4000
+        queue-id: rakudo-build
         title: debian build
         sparrowdo:
           docker: debian
           bootstrap: true
           no_sudo: true
+      -
+        url: https://sparrowhub.io:4000
+        queue-id: rakudo-build
+        title: run-docker archlinux
+        action: run-docker        
+        vars:
+          DOCKER: archlinux
       -
         url: https://sparrowhub.io:4000
         queue-id: rakudo-build
