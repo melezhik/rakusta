@@ -1,5 +1,3 @@
-set -e
-
 name=$(config name)
 
 status=$(docker inspect --format '{{json .State.Running}}' $name)
