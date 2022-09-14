@@ -16,6 +16,14 @@ Build rakudo on a variety of platforms
 cromt --conf jobs.yaml
 ```
 
+# Platforms supported
+
+* Alpine
+
+* Debian
+
+* Arch Linux
+
 # Author
 
 Alexey Melezhik
