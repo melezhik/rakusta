@@ -1,6 +1,7 @@
 projects:
   run_docker:
     path: https://github.com/melezhik/rakusta.git
+    title: run dockers
     hosts:
       -
         url: https://sparrowhub.io:4000
