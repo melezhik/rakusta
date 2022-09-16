@@ -25,6 +25,7 @@ projects:
         vars:
           DOCKER: archlinux
       -
+        url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: run-docker fedora
         action: run-docker
@@ -66,6 +67,7 @@ projects:
           bootstrap: true
           no_sudo: true
       -
+        url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: fedora build
         sparrowdo:
