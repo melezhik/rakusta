@@ -74,3 +74,35 @@ projects:
           docker: fedora
           bootstrap: true
           no_sudo: true
+  stop_docker:
+    path: https://github.com/melezhik/rakusta.git
+    title: stop dockers
+    hosts:
+      -
+        url: https://sparky.sparrowhub.io
+        queue-id: rakudo-build
+        title: stop-docker alpine
+        action: stop-docker
+        vars:
+          DOCKER: alpine
+      -
+        url: https://sparky.sparrowhub.io
+        queue-id: rakudo-build
+        title: stop-docker debian
+        action: stop-docker
+        vars:
+          DOCKER: debian
+      -
+        url: https://sparky.sparrowhub.io
+        queue-id: rakudo-build
+        title: stop-docker archlinux
+        action: stop-docker
+        vars:
+          DOCKER: archlinux
+      -
+        url: https://sparky.sparrowhub.io
+        queue-id: rakudo-build
+        title: stop-docker fedora
+        action: stop-docker
+        vars:
+          DOCKER: fedora
