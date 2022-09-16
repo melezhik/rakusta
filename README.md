@@ -24,6 +24,8 @@ cromt --conf jobs.yaml
 
 * Arch Linux
 
+* Fedora
+
 # Author
 
 Alexey Melezhik

@@ -24,6 +24,12 @@ projects:
         action: run-docker
         vars:
           DOCKER: archlinux
+      -
+        queue-id: rakudo-build
+        title: run-docker fedora
+        action: run-docker
+        vars:
+          DOCKER: fedora
   rakusta:
     path: https://github.com/melezhik/rakusta.git
     #action: docker build stop
@@ -57,5 +63,12 @@ projects:
         title: archlinux build
         sparrowdo:
           docker: archlinux
+          bootstrap: true
+          no_sudo: true
+      -
+        queue-id: rakudo-build
+        title: fedora build
+        sparrowdo:
+          docker: fedora
           bootstrap: true
           no_sudo: true
