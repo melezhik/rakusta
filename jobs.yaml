@@ -40,6 +40,9 @@ projects:
     before:
       -
         name: run_docker
+    after:
+      -
+        name: stop_docker
     hosts:
       -
         url: https://sparky.sparrowhub.io
