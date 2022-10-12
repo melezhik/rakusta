@@ -4,28 +4,24 @@ projects:
     title: run dockers
     hosts:
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: run-docker alpine
         action: run-docker
         vars:
           DOCKER: alpine
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: run-docker debian
         action: run-docker
         vars:
           DOCKER: debian
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: run-docker archlinux
         action: run-docker
         vars:
           DOCKER: archlinux
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: run-docker fedora
         action: run-docker
@@ -33,10 +29,8 @@ projects:
           DOCKER: fedora
   rakusta:
     path: https://github.com/melezhik/rakusta.git
-    #action: docker build stop
-    #action: hello
     action: build
-    title: linux builds
+    title: rakudo linux builds
     timeout: 3000
     before:
       -
@@ -46,7 +40,6 @@ projects:
         name: stop_docker
     hosts:
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: alpine build
         action: alpine-setup build
@@ -55,7 +48,6 @@ projects:
           bootstrap: true
           no_sudo: true
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: debian build
         sparrowdo:
@@ -63,7 +55,6 @@ projects:
           bootstrap: true
           no_sudo: true
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: archlinux build
         sparrowdo:
@@ -71,7 +62,6 @@ projects:
           bootstrap: true
           no_sudo: true
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: fedora build
         sparrowdo:
@@ -83,28 +73,24 @@ projects:
     title: stop dockers
     hosts:
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: stop-docker alpine
         action: stop-docker
         vars:
           DOCKER: alpine
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: stop-docker debian
         action: stop-docker
         vars:
           DOCKER: debian
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: stop-docker archlinux
         action: stop-docker
         vars:
           DOCKER: archlinux
       -
-        #url: https://sparky.sparrowhub.io
         queue-id: rakudo-build
         title: stop-docker fedora
         action: stop-docker
